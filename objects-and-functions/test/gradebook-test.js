@@ -1,5 +1,6 @@
 var assert = require('chai').assert;
 var GradeBook = require('../lib/gradebook');
+var Course = require('../lib/gradebook');
 
 describe('GradeBook', function() {
 
@@ -10,6 +11,7 @@ describe('GradeBook', function() {
   it('should have an instructor', function() {
     var bio = new Course("Bio", 3);
     var gradebook = new GradeBook('Ms. Frizzle', bio);
+    //the bio argument could be written as {title: "Bio", hours: 3}
 
     assert.equal(gradebook.instructor, 'Ms. Frizzle');
   });
